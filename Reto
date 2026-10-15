@@ -100,29 +100,7 @@ public class RetoRecorridos {
         return raiz;
     }
 
-    static void ejecutar(String titulo, int[] matriculas) {
-        System.out.println("=== " + titulo + " ===");
-
-        NodoEstudiante raiz = construir(matriculas);
-        StringBuilder pre = new StringBuilder();
-        StringBuilder in = new StringBuilder();
-        StringBuilder pos = new StringBuilder();
-
-        System.out.println("-- traza PREORDEN");
-        preorden(raiz, "", pre);
-
-        System.out.println("-- traza INORDEN");
-        inorden(raiz, "", in);
-
-        System.out.println("-- traza POSORDEN");
-        posorden(raiz, "", pos);
-
-        System.out.println("Preorden: " + pre.toString().trim());
-        System.out.println("Inorden:  " + in.toString().trim());
-        System.out.println("Posorden: " + pos.toString().trim());
-        System.out.println("Altura (extra): " + altura(raiz));
-        System.out.println();
-    }
+    
 
     public static void main(String[] args) {
         ejecutar("Reto SW-N3-A",
